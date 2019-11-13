@@ -1,0 +1,10 @@
+<h1>Liste des meubles à vendre</h1>
+{{datejour | date :'dd:MMMM' }}
+<ul *ngFor="let m of meubles" [ngClass]="">
+        <app-meuble [lib]="m.libelle" [image]="m.img"  [prix]="m.prixTTC" [etat]="m.neuf"></app-meuble>
+</ul>
+
+<select>
+<option selected>Neuf</option>
+<option>d'occation</option>
+</select>
